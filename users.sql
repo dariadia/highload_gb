@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS db_onlineshop;
+CREATE DATABASE db_onlineshop DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+USE db_onlineshop;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id SERIAL,
+  username VARCHAR(45) NOT NULL UNIQUE,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  PRIMARY KEY (id));
