@@ -34,12 +34,12 @@ server {
     root /var/www/html;
 
     location / {
-    proxy_pass http://cache-api/;
-    proxy_read_timeout 15;
-    proxy_connect_timeout 3;
-    proxy_set_header Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://cache-api/;
+        proxy_read_timeout 15;
+        proxy_connect_timeout 3;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
     }
 }
 
